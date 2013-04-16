@@ -1,0 +1,2 @@
+language: go
+install: go test -bench . -cpu 1,2,3,4,5,6,8,10,12,14,16

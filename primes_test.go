@@ -21,12 +21,11 @@ func filter(in <-chan int, out chan<- int, prime int) {
 }
 
 const (
-	Prime1 = 2 // 2 is the 1st prime.
-	Prime10 = 29 // 29 is the 10th prime.
-	Prime100 = 541 // 541 is the 100th prime.
-	Prime1000 = 7919 // 7919 is the 1000th prime.
+	Prime1     = 2      // 2 is the 1st prime.
+	Prime10    = 29     // 29 is the 10th prime.
+	Prime100   = 541    // 541 is the 100th prime.
+	Prime1000  = 7919   // 7919 is the 1000th prime.
 	Prime10000 = 104729 // 104729 is the 10000th prime.
-	Prime100000 = 1299709 // 1299709 is the 100000th prime.
 )
 
 func BenchmarkPrimes1(b *testing.B) {
@@ -47,10 +46,6 @@ func BenchmarkPrimes1000(b *testing.B) {
 
 func BenchmarkPrimes10000(b *testing.B) {
 	primes(b, 10000, Prime10000)
-}
-
-func BenchmarkPrimes100000(b *testing.B) {
-	primes(b, 100000, Prime100000)
 }
 
 func primes(b *testing.B, count, last int) {
